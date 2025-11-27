@@ -17,34 +17,26 @@ SCHEMA = {
 }
 
 def analyze_plant(image_path: str):
-    """
-    Sends the plant image to the LLM and retrieves structured plant info.
-    """
+    image_path = image_path = "C:/Users/Odin/Documents/GitHub/robotics_final_project/images/monstera-deliciosa.jpg"
 
-    # Load image
-    try:
-        img = Image.open(image_path)
-    except Exception as e:
-        print(f"Error loading image: {e}")
-        return None
-
-    # Prompt instructions for Gemini
+    img = Image.open(image_path)
+    
     prompt_text = (
         "You are an expert botanist. Identify the plant in the image. "
-        "Return the plant's scientific (Latin) name, its common name, "
-        "and estimate how much water (in milliliters) a typical healthy plant "
-        "of this type should receive per watering. "
-        "If unsure, provide your best guess and a confidence score from 0 to 1."
+        "Return the plant's scientific (Latin) name, common name, "
+        "recommended water amount in milliliters, and a confidence "
+        "score from 0 to 1. Respond strictly following the JSON schema."
     )
 
-    # Send request to Gemini
-    response = prompt_gemini(
+    # IMPORTANT: same usage style as your old prompt_gemini calls
+    response, logs = prompt_gemini(
         input_prompt=[img, prompt_text],
         schema=SCHEMA,
-        temperature=0.0  # deterministic output
+        with_tokens_info=True,
+        temperature=0.0
     )
 
-    return response
+    return response, logs
 
 
 if __name__ == "__main__":
