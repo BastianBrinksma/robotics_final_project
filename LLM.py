@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-env_path = "./config/.env"
+env_path = "./.env"
 load_dotenv(dotenv_path=env_path)
 
 # System instruction that can dictate how the model behaves in the output, can be customized as needed
