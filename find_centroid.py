@@ -27,4 +27,20 @@ def detect_green_centroid(image):
     if len(contours) == 0:
         print("No green object detected.")
         return None
+    
+    # 4. choose the largest green blob
+    largest = max(contours, key=cv2.contourArea)
+
+    # 5. compute the centroid
+    M = cv2.moments(largest)
+    if M["m00"] == 0:
+        print("Area too small to compute centroid.")
+        return None
+
+    cx = int(M["m10"] / M["m00"])
+    cy = int(M["m01"] / M["m00"])
+    centroid = (cx, cy)
+    print("Centroid of green object:", centroid)
+    
+    return centroid
 

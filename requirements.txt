@@ -3,3 +3,4 @@ python-dotenv
 pillow
 opencv-python
 numpy
+ultralytics
