@@ -41,7 +41,7 @@ def analyze_plant(image_path: str):
 
 if __name__ == "__main__":
     # Test the system with the example image
-    test_image = "images/plant.jpg"
+    test_image = "images/monstera-deliciosa.jpg"
 
     result = analyze_plant(test_image)
 
@@ -50,3 +50,4 @@ if __name__ == "__main__":
         print(result)
     else:
         print("No response received from the LLM.")
+

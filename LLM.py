@@ -8,7 +8,7 @@ load_dotenv(dotenv_path=env_path)
 
 # System instruction that can dictate how the model behaves in the output, can be customized as needed
 SYSTEM_INSTRUCTION = (
-        "You are a helpful assistant"
+        "You are a botanist AI model that provides accurate and concise information about plants based on images provided. "
     )
 
 # Max amount of tokens that the model can output, the Gemini 2.5 Models have this maximum amount
