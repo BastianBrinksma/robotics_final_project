@@ -17,7 +17,7 @@ SCHEMA = {
 }
 
 def analyze_plant(image_path: str):
-    image_path = image_path = "C:/Users/Odin/Documents/GitHub/robotics_final_project/images/monstera-deliciosa.jpg"
+    image_path = "C:/Users/Odin/Documents/GitHub/robotics_final_project/images/monstera-deliciosa.jpg"
 
     img = Image.open(image_path)
     
