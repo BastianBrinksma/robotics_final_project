@@ -1,8 +1,12 @@
 import cv2
 import numpy as np
 
+
+
+## started with this method, switched to  YOLO model for better accuracy
+#  So i will probably delete this file later
 def detect_green_centroid(image):
-    image = "C:/Users/Odin/Documents/GitHub/robotics_final_project/images/monstera-deliciosa.jpg"
+    image = " "
     img = cv2.imread(image)
     if img is None:
         print(f"Error: Could not load image: {image}")
