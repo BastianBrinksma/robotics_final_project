@@ -17,7 +17,7 @@ SCHEMA = {
 }
 
 def analyze_plant(image_path: str):
-    image_path = "C:/Users/Odin/Documents/GitHub/robotics_final_project/images/monstera-deliciosa.jpg"
+    image_path = "images/monstera-deliciosa.jpg"
 
     img = Image.open(image_path)
     
@@ -26,6 +26,7 @@ def analyze_plant(image_path: str):
         "Return the plant's scientific (Latin) name, common name, "
         "recommended water amount in milliliters, and a confidence "
         "score from 0 to 1. Respond strictly following the JSON schema."
+        "How "
     )
 
     # IMPORTANT: same usage style as your old prompt_gemini calls
