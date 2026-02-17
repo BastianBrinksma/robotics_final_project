@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-
+#hi
 env_path = "./robotics_env/.env"
 load_dotenv(dotenv_path=env_path)
 
